@@ -1,3 +1,4 @@
+# Credits to @zawadidone; https://github.com/Zawadidone/non-root-docker-images/blob/master/python/Dockerfile
 FROM python:3.11.2-alpine3.17
 
 WORKDIR /app

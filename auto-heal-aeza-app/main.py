@@ -41,6 +41,7 @@ def get_hostname_with_id(services):
     
     return services_map
 
+# Credits to @Fmstrat; https://raw.githubusercontent.com/Fmstrat/server-monitor/master/server-monitor.py
 def tcpCheck(ip, port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(5)
