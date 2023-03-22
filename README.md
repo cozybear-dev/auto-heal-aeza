@@ -6,4 +6,4 @@
 
 `crontab -e`
 
-`*/5 * * * * docker-compose up -f /path/to/this/repo`
+`*/5 * * * * /usr/local/bin/docker-compose -f /path/to/this/repo/docker-compose.yml up -d`
