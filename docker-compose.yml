@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  auto-heal-aeza:
+    image: auto-heal-aeza:latest
+    build:
+      context: ./auto-heal-aeza-app
+    environment:
+      - AEZA_API_KEY
+    restart: on-failure
