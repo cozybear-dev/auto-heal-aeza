@@ -44,7 +44,7 @@ def get_hostname_with_id(services):
 # Credits to @Fmstrat; https://raw.githubusercontent.com/Fmstrat/server-monitor/master/server-monitor.py
 def tcpCheck(ip, port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(5)
+    s.settimeout(30)
     try:
         s.connect((ip, int(port)))
         s.shutdown(socket.SHUT_RDWR)
