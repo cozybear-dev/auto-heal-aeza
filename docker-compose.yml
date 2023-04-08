@@ -6,4 +6,5 @@ services:
       context: ./auto-heal-aeza-app
     environment:
       - AEZA_API_KEY
+      - HEALTH_CHECK_URL
     restart: on-failure

@@ -54,6 +54,9 @@ def tcpCheck(ip, port):
     finally:
         s.close()
 
+def sendExecutionHeartbeat(heartbeat):
+    requests.get(heartbeat)
+
 def main():
     logging.basicConfig()
     logging.getLogger().setLevel(logging.DEBUG)
@@ -71,6 +74,8 @@ def main():
         if tcpCheck(service, 443) is False:
             logging.critical(f'{service} is down, rebooting now...')
             api.reboot_service(services[service])
+
+    sendExecutionHeartbeat(os.getenv('HEALTH_CHECK_URL'))
 
 if __name__ == '__main__':
     main()
